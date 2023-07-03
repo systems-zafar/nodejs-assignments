@@ -1,0 +1,107 @@
+User Controller API Requests:
+
+//Create a user:
+POST /users
+{
+  "username": "zafar_ahmed",
+  "firstName": "Zafar",
+  "lastName": "Ahmed",
+  "email": "zafar.ahmed@systemsltd.com",
+  "address": "Gulistan-e-johar",
+  "password": "Abcd@1234"
+}
+
+//Update a user:
+PUT /users/:id
+Authorization: Bearer <token>
+{
+  "firstName": "Zafar",
+  "lastName": "Ahmed",
+  "email": "zafar.ahmed@systemsltd.com",
+  "address": "Gulistan-e-johar"
+}
+
+//Delete a user:
+DELETE /users/:id
+Authorization: Bearer <token>
+
+//Get a user by ID:
+GET /users/:id
+Authorization: Bearer <token>
+
+//Get a list of users:
+GET /users
+Authorization: Bearer <token>
+Auth Controller API Requests:
+
+//User login:
+POST /login
+{
+  "username": "zafar_ahmed",
+  "password": "Abcd@1234"
+}
+
+
+Product Controller API Requests:
+Create a product:
+POST /products
+Authorization: Bearer <token>
+{
+  "title": "Product 1",
+  "description": "This is product 1",
+  "price": 9.99,
+  "quantity": 10,
+  "category": "Electronics"
+}
+
+Update a product:
+PUT /products/:id
+Authorization: Bearer <token>
+{
+  "title": "Product 1 updated",
+  "description": "This is the updated product 1",
+  "price": 14.99,
+  "quantity": 5,
+  "category": "Electronics"
+}
+
+Delete a product:
+DELETE /products/:id
+Authorization: Bearer <token>
+
+Get a product by ID:
+GET /products/:id
+Authorization: Bearer <token>
+
+Get a list of products:
+GET /products
+Authorization: Bearer <token>
+
+Cart Controller API Requests:
+Add a product to the cart:
+POST /cart/add-to-cart/:productId
+Authorization: Bearer <token>
+{
+  "quantity": 2
+}
+
+Get the user's cart:
+GET /cart
+Authorization: Bearer <token>
+
+Checkout Controller API Requests:
+Place an order:
+POST /checkout/place-order
+Authorization: Bearer <token>
+{
+  "products": [
+    {
+      "productId": "product_id_1",
+      "quantity": 2
+    },
+    {
+      "productId": "product_id_2",
+      "quantity": 1
+    }
+  ]
+}

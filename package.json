@@ -1,0 +1,19 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Express Starter",
+  "main": "app.server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/systems-zafar/nodejs-assignments.git"
+  },
+  "author": "Zafar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/systems-zafar/nodejs-assignments/issues"
+  },
+  "homepage": "https://github.com/systems-zafar/nodejs-assignments#readme"
+}
