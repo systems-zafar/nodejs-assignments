@@ -4,7 +4,8 @@
   "description": "Express Starter",
   "main": "app.server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,12 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/systems-zafar/nodejs-assignments/issues"
+  },
+  "devDependencies": {
+        "eslint": "^8.45.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.27.5",
+        "husky": "^8.0.3"
   },
   "homepage": "https://github.com/systems-zafar/nodejs-assignments#readme"
 }

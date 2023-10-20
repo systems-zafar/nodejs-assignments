@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const app = express();
 
 const PORT = process.env.PORT;
@@ -37,7 +38,7 @@ app.use('/auth', authController);
 app.use('/products', authMiddleware.authenticate, productController);
 app.use('/carts', authMiddleware.authenticate, cartController);
 app.use('/checkout', authMiddleware.authenticate, checkoutController);
-
+app.use(express.static(path.join(__dirname, 'public')));
 // Start the server
 app.listen(PORT, HOST, () => {
   console.log(`Server running on http://${HOST}:${PORT}`);
